@@ -1,2 +1,2 @@
 # Sable
-SONAGI Crypto Study
+SONAGI Crypto Track
