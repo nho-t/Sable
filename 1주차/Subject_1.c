@@ -57,9 +57,9 @@ void integrity_demo() {
     printf("비교 체크값: %d\n", value2);
 
     if (value1 == value2) {
-        printf("-> 데이터가 그대로라고 판단한다.\n\n");
+        printf("-> 데이터가 그대로라고 판단.\n\n");
     } else {
-        printf("-> 데이터가 바뀌었다고 판단한다.\n\n");
+        printf("-> 데이터가 바뀌었다고 판단.\n\n");
     }
 }
 
@@ -90,9 +90,9 @@ void authentication_demo() {
     scanf("%49s", pw);
 
     if (authenticate(id, pw)) {
-        printf("-> 인증 성공이다.\n\n");
+        printf("-> 인증 성공.\n\n");
     } else {
-        printf("-> 인증 실패이다.\n\n");
+        printf("-> 인증 실패.\n\n");
     }
 }
 
