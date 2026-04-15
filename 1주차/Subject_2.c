@@ -47,7 +47,7 @@ void key_demo(const char* plain) {
     printf("같은 평문: %s\n", plain);
     printf("키 1 사용 결과: %s\n", result1);
     printf("키 3 사용 결과: %s\n", result2);
-    printf("-> 키가 다르면 암호화 결과도 달라진다.\n");
+    printf("-> 키가 다르면 암호화 결과도 달라지는 것을 확인 가능.\n");
 }
 
 int main() {
@@ -62,7 +62,7 @@ int main() {
     scanf(" %99[^\n]", plain);
 
     show_plaintext(plain);
-    printf("-> 평문은 암호화 전의 원래 데이터이다.\n\n");
+    printf("-> 평문은 암호화 전의 원래 데이터.\n\n");
 
     /* ---------------- 2. 암호화 ---------------- */
     printf("----- 2. 암호화 (Encryption) -----\n");
@@ -73,13 +73,11 @@ int main() {
 
     printf("원본 평문: %s\n", plain);
     printf("암호화 결과: %s\n", encrypted);
-    printf("-> 암호화는 평문을 바로 읽지 못하게 바꾸는 과정이다.\n\n");
 
     /* ---------------- 복호화 확인 ---------------- */
     decrypt_text(encrypted, decrypted, key);
     printf("복호화 결과: %s\n", decrypted);
-    printf("-> 같은 키를 사용하면 다시 원래 데이터로 되돌릴 수 있다.\n\n");
-
+  
     /* ---------------- 3. 키 ---------------- */
     printf("----- 3. 키 (Key) -----\n");
     key_demo(plain);
