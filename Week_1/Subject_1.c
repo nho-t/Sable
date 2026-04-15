@@ -10,7 +10,7 @@ void confidentiality_demo() {
 
     printf("----- 기밀성 (Confidentiality) -----\n");
     printf("문자열 입력: ");
-    scanf(" %99[^\n]", text);
+    scanf(" %99[^\n]", text); //99까지 출력되도록 제한
 
     for (int i = 0; text[i] != '\0'; i++) {
         if (text[i] >= 'A' && text[i] <= 'Z') {
