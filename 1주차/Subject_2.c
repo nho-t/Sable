@@ -10,6 +10,7 @@ void show_plaintext(const char* text) {
 
 /* --------------------------------------------------
    2. 암호화 (Encryption)
+   - 평문을 바로 읽지 못하도록 다른 형태로 바꾸는 과정으로, 여기서는 각 문자에 key만큼 더하는 아주 단순한 방식.
 -------------------------------------------------- */
 void encrypt_text(const char* plain, char* encrypted, int key) {
     int i;
@@ -23,6 +24,7 @@ void encrypt_text(const char* plain, char* encrypted, int key) {
 
 /* --------------------------------------------------
    복호화 함수
+   - 암호화된 데이터를 다시 원래 형태로 되돌린다.
 -------------------------------------------------- */
 void decrypt_text(const char* encrypted, char* decrypted, int key) {
     int i;
@@ -36,6 +38,7 @@ void decrypt_text(const char* encrypted, char* decrypted, int key) {
 
 /* --------------------------------------------------
    3. 키 (Key)
+   - 암호화할 때 사용하는 값이다. 또한 같은 평문이라도 키가 다르면 결과가 달라진다.
 -------------------------------------------------- */
 void key_demo(const char* plain) {
     char result1[100];
