@@ -10,7 +10,7 @@ void show_plaintext(const char* text) {
 
 /* --------------------------------------------------
    2. 암호화 (Encryption)
-   - 평문을 바로 읽지 못하도록 다른 형태로 바꾸는 과정으로, 여기서는 각 문자에 key만큼 더하는 아주 단순한 방식.
+   - 암호화 알고리즘은 평문의 아스키 값을 key만큼 더하여 암호화했다. 예를 들면 문자 'A'의 아스키 값은 65인데 key가 1이면 66이 되어 'B'가 된다.
 -------------------------------------------------- */
 void encrypt_text(const char* plain, char* encrypted, int key) {
     int i;
@@ -45,11 +45,11 @@ void key_demo(const char* plain) {
     char result2[100];
 
     encrypt_text(plain, result1, 1);
-    encrypt_text(plain, result2, 3);
+    encrypt_text(plain, result2, 99);
 
     printf("같은 평문: %s\n", plain);
     printf("키 1 사용 결과: %s\n", result1);
-    printf("키 3 사용 결과: %s\n", result2);
+    printf("키 99 사용 결과: %s\n", result2);
     printf("-> 키가 다르면 암호화 결과도 달라지는 것을 확인 가능.\n");
 }
 
@@ -69,7 +69,7 @@ int main() {
 
     /* ---------------- 2. 암호화 ---------------- */
     printf("----- 2. 암호화 (Encryption) -----\n");
-    printf("암호화에 사용할 키 입력(정수): ");
+    printf("암호화에 사용할 키 입력(1~99): ");
     scanf("%d", &key);
 
     encrypt_text(plain, encrypted, key);
